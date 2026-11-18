@@ -9,6 +9,7 @@ import androidx.compose.material3.Card
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.material3.Text
@@ -39,7 +40,7 @@ fun EventCard(
                     .padding(end = 16.dp)
             )
             Button(onClick = onBook, enabled = !event.isFull) {
-                Text(if (event.isFull) "Complet" else "Réserver")
+                Text(stringResource(if (event.isFull) R.string.full else R.string.book))
             }
         }
     }
@@ -50,7 +51,7 @@ fun EventCard(
 fun EventCardPreview() {
     ProjetDevMobileTheme {
         EventCard(
-            event = Event(1, "Festival de musique", "Concert", "Amphithéâtre A", 50),
+            event = Event(1, "Festival de musique", "Concert", "Amphithéâtre A", "", 50),
             onClick = {},
             onBook = {}
         )
@@ -62,7 +63,7 @@ fun EventCardPreview() {
 fun EventCardFullPreview() {
     ProjetDevMobileTheme {
         EventCard(
-            event = Event(4, "Hackathon Android", "Compétition", null, 0),
+            event = Event(4, "Hackathon Android", "Compétition", null, "", 0),
             onClick = {},
             onBook = {}
         )

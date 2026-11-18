@@ -2,10 +2,16 @@ package com.example.projetdevmobile.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-val Purple80 = Color(0xFFD0BCFF)
-val PurpleGrey80 = Color(0xFFCCC2DC)
-val Pink80 = Color(0xFFEFB8C8)
+// Couleur principale de Campus : vert
+val Green40 = Color(0xFF2E7D32)
+val Green80 = Color(0xFF81C784)
+val GreenGrey40 = Color(0xFF52634F)
+val GreenGrey80 = Color(0xFFB9CCB4)
+val Teal40 = Color(0xFF39656B)
+val Teal80 = Color(0xFFA1CED5)
 
-val Purple40 = Color(0xFF6650a4)
-val PurpleGrey40 = Color(0xFF625b71)
-val Pink40 = Color(0xFF7D5260)
+val GreenOnDark = Color(0xFF003910)
+val GreenContainerLight = Color(0xFFB7F0B9)
+val GreenOnContainerLight = Color(0xFF00210A)
+val GreenContainerDark = Color(0xFF1B5E20)
+val GreenOnContainerDark = Color(0xFFC8E6C9)

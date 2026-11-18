@@ -15,6 +15,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -33,22 +34,6 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    ProjetDevMobileTheme {
-        Greeting("Android")
-    }
-}
-
-@Composable
 fun EventHeader(title: String, category: String, location: String?, modifier: Modifier = Modifier) {
     Column(modifier = modifier) {
         Text(
@@ -61,7 +46,7 @@ fun EventHeader(title: String, category: String, location: String?, modifier: Mo
             color = MaterialTheme.colorScheme.primary
         )
         Text(
-            text = location ?: "Lieu à confirmer",
+            text = location ?: stringResource(R.string.location_unknown),
             style = MaterialTheme.typography.bodyMedium
         )
     }
